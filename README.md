@@ -1,11 +1,16 @@
-AI-Powered UEBA System for Insider Threat Detection
-Overview
+# AI‑Powered UEBA System for Insider Threat Detection
 
-This project implements an AI-based User and Entity Behavior Analytics (UEBA) system for detecting anomalous user behavior and potential insider threats.
+## Overview
 
-The system analyzes user activity logs using Machine Learning and assigns risk scores to prioritize security investigations, simulating real-world Security Operations Center (SOC) workflows.
+This project implements an **AI‑based User and Entity Behavior Analytics (UEBA) system** designed to detect anomalous user behavior and potential insider threats.
 
-Architecture
+The system analyzes user activity logs using Machine Learning and assigns **risk scores** to help prioritize security investigations, simulating real‑world Security Operations Center (SOC) workflows.
+
+---
+
+## Architecture
+
+```
 User Activity Logs
         ↓
 Data Preprocessing
@@ -15,71 +20,68 @@ Isolation Forest (Anomaly Detection)
 Risk Scoring Engine
         ↓
 Risk Level Classification
+```
 
-Dataset Features
+---
 
-user_id
+## Dataset Features
 
-login_time_hour
+The dataset includes the following behavioral attributes:
 
-login_location_risk
+* **user_id**
+* **login_time_hour**
+* **login_location_risk**
+* **failed_logins**
+* **files_accessed**
+* **data_download_mb**
+* **usb_usage**
+* **anomaly_label**
 
-failed_logins
+> The dataset contains approximately **10% anomalous behavior**, reflecting realistic cybersecurity scenarios.
 
-files_accessed
+---
 
-data_download_mb
+## Technologies Used
 
-usb_usage
+* Python
+* Pandas
+* Scikit‑learn
+* NumPy
+* Matplotlib
 
-anomaly_label
+---
 
-The dataset contains approximately 10% anomalous behavior, reflecting realistic cybersecurity scenarios.
+## Model
 
-Technologies Used
+The project uses **Isolation Forest**, an unsupervised anomaly detection algorithm that identifies abnormal behavioral patterns without requiring labeled attack data.
 
-Python
+---
 
-Pandas
+## Use Cases
 
-Scikit-learn
+* Insider threat detection
+* Compromised account identification
+* Behavioral anomaly detection
+* SOC alert prioritization
 
-NumPy
+---
 
-Matplotlib
+## Collaboration
 
-Model
+**Mohammed Isaq — AI & ML Engineer**
 
-The project uses Isolation Forest, an unsupervised anomaly detection algorithm that identifies abnormal behavioral patterns without requiring labeled attack data.
+* ML model development
+* Anomaly detection pipeline
+* Risk scoring implementation
 
-Use Cases
+**Ayub Ahmed — SOC Analyst**
 
-Insider threat detection
+* Security workflow design
+* UEBA behavioral validation
+* Risk prioritization logic
 
-Compromised account identification
+---
 
-Behavioral anomaly detection
+## License
 
-SOC alert prioritization
-
-Collaboration
-
-Mohammed Isaq — AI & ML Engineer
-
-ML model development
-
-Anomaly detection pipeline
-
-Risk scoring implementation
-
-Ayub Ahmed — SOC Analyst
-
-Security workflow design
-
-UEBA behavioral validation
-
-Risk prioritization logic
-
-License
-
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
